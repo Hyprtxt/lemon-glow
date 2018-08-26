@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+
+.container {
+  position: fixed;
+  perspective: 2500px;
+  background: transparent;
+  transform-style: preserve-3d;
+  perspective: 2500px;
+  width: 100%;
+  height: 100%;
+}
+
+.bounce {
+  animation: bounce 12s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite
+    alternate;
+
+  /* animation: bounce 12s ease infinite alternate; */
+  width: 100%;
+  height: 56.25vw;
+}
+
+.scale {
+  animation: scale 7s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+  width: 100%;
+  height: 56.25vw;
+}
+
+.bbq {
+
+  /* animation: bbq 7s linear infinite alternate; */
+  width: 100%;
+  height: 56.25vw;
+}
+
+.spin {
+  width: 100%;
+  height: 56.25vw;
+  animation: spin 15s linear infinite;
+}
+
+@keyframes zoom {
+  from {
+    perspective: 500px;
+  }
+
+  to {
+    perspective: 1000px;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+
+  to {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(-300px);
+  }
+
+  to {
+    transform: translateY(300px);
+  }
+}
+
+@keyframes bbq {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+
+    /* , scale(2, 2); */
+  }
+
+  to {
+    transform: rotateY(360deg);
+
+    /* , scale(1, 2); */
+  }
+}
